@@ -1,0 +1,112 @@
+<div class="d-flex align-items-center  justify-content-between gap-20">
+  <div class="d-flex direction-column gap-20 w-50 align-items-center">
+    <h4>Permanent Address</h4>
+      <div>
+        Enter Your Name : <input type="text" placeholder="Enter your name" #name>
+      </div>
+      <div>
+        Enter Your Permanent Address : <input type="text" placeholder="Enter your permanent address" #permanentAddress >
+      </div>
+      <div>
+        PIN Code : <input type="text" placeholder="Enter your PIN code" #pinCode >
+      </div>
+      <div>
+        Village : <input type="text" placeholder="Enter your village name" #village >
+      </div>
+      <div>
+        Panchayat : <input type="text" placeholder="Enter your panchayat name" #panchayat>
+      </div>
+      <div>
+        District : <input type="text" placeholder="Enter your district name" #district >
+      </div>
+  </div>
+  <div class="d-flex align-items-center justify-content-center w-50">
+    <button class="btn btn-primary w-50" (click)="setPermanentAddress(name.value,permanentAddress.value,(pinCode.value),village.value,panchayat.value,district.value);">
+      Same as Permanent Address
+    </button>
+  </div>
+  <div class="d-flex direction-column gap-20 w-50 align-items-center">
+        <h4>Present Address</h4>
+      <div>
+        Enter Your Name : <input type="text" placeholder="Enter your name" id="presentName" value="{{perName}}" >
+      </div>
+      <div>
+        Enter Your Present Address : <input type="text" placeholder="Enter your present address" id="presentAddress" value="{{perAddress}}" >
+      </div>
+      <div>
+        PIN Code : <input type="text" placeholder="Enter your PIN code" id="presentPinCode" value="{{perpin}}" >
+      </div>
+      <div>
+        Village : <input type="text" placeholder="Enter your village name" id="presentVillage" value="{{perVillage}}" >
+      </div>
+      <div>
+        Panchayat : <input type="text" placeholder="Enter your panchayat name" id="presentPanchayat" value="{{perPanchayat}}" >
+      </div>
+      <div>
+        District : <input type="text" placeholder="Enter your district name" id="presentDistrict" value="{{perDistrict}}">
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2>User Name: {{userName}}</h2>
+<input type="text" placeholder="Enter user name" (input)="getUserName($event)" value="{{name}}">
+<br>
+<button (click)="setUserName($event)">Set UserName</button>
+
+<button (click)="setDefaultName()">Set Default</button>
+
+
+<hr>
+<h2> Email : {{email}}</h2>
+<input type="text" placeholder="email" #emailField>
+<button (click)="getEmail(emailField.value)">Get Email</button>
+<button (click)="setEmail(emailField.value)">Set Email</button> -->
+
+
+
+
+
+
+
+
+
+
+<!-- <button (click)="evenHandler($event)" class="btn" name="bth">Click Me</button>
+<div class="dv h-100 w-100" style="background-color: deepskyblue;" (mouseenter)="evenHandler($event)">div</div>
+<div class="dv h-100 w-100" style="background-color: gray;" (mouseleave)="evenHandler($event)">div</div>
+<input type="text" (input)="inputEvent($event)">
+
+
+ -->
+
+
+
+
+
+
+ 
+
+
+
+
+<!-- Counter UI and functionality -->
+<!-- <div class="d-flex vh-100 align-items-center justify-content-center">
+  <div class="d-flex direction-column">
+    <h1 class="text-center">{{count}}</h1>
+    <div class="d-flex gap-20 justify-content-center">
+      <button (click)="countHandler('minus')" class="btn btn-warning">Decrement</button>
+      <button (click)="countHandler('reset')" class="btn btn-secondary">Reset</button>
+      <button (click)="countHandler('plus')" class="btn btn-primary">Increment</button>
+    </div>
+  </div>
+</div> -->
