@@ -11,6 +11,29 @@ import { Component, signal } from '@angular/core';
 export class App {
   protected readonly title = signal('first-ng-app');
 
+  theme="Light Mode";
+  changeTheme(appTheme: HTMLElement)
+  {
+    if(this.theme=="Dark Mode")
+      {
+        this.theme="Light Mode";
+        appTheme.classList.add("bg-dark","text-light");
+        appTheme.classList.remove("bg-light","text-dark");
+      }
+    else
+    {
+      this.theme="Dark Mode";
+      appTheme.classList.add("bg-light","text-dark");
+      appTheme.classList.remove("bg-dark","text-light");
+    }
+
+  }
+  // display=false;
+
+  // toggleButton()
+  // {
+  //   this.display=!this.display;
+  // }
 
   // name:string="";
   // pin="";
@@ -18,12 +41,12 @@ export class App {
   // village="";
   // panchayat="";
   // district="";
-  perName:string="";
-  perpin="";
-  perAddress="";
-  perVillage="";
-  perPanchayat="";
-  perDistrict="";
+  // perName:string="";
+  // perpin="";
+  // perAddress="";
+  // perVillage="";
+  // perPanchayat="";
+  // perDistrict="";
 
   // getInput(event:Event,id:string)
   // {
@@ -52,15 +75,15 @@ export class App {
   //     this.district=(event.target as HTMLInputElement).value;
   //   }
   // }
-  setPermanentAddress(name:string,permanentAddress:string,pinCode:string,village:string,panchayat:string,district:string)
-  {
-    this.perName=name;
-    this.perAddress=permanentAddress;
-    this.perPanchayat=panchayat;
-    this.perDistrict=district;
-    this.perpin=pinCode;
-    this.perVillage=village;
-  }
+  // setPermanentAddress(name:string,permanentAddress:string,pinCode:string,village:string,panchayat:string,district:string)
+  // {
+  //   this.perName=name;
+  //   this.perAddress=permanentAddress;
+  //   this.perPanchayat=panchayat;
+  //   this.perDistrict=district;
+  //   this.perpin=pinCode;
+  //   this.perVillage=village;
+  // }
 
 
   // userName:string="";
