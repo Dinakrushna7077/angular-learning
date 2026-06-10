@@ -1,3 +1,22 @@
+<div class="d-flex gap-4 ">
+  <div>
+    <div><b>Property</b></div>
+    <div>{{x}}</div>
+  </div>
+  <div>
+    <div><b>Signal</b></div>
+    <div>{{count()}}</div>
+  </div>
+</div>
+
+<br>
+<button (click)="count.set(count()+1)">count ++</button>
+<button (click)="(x=x+1)">count ++</button>
+
+<hr>
+
+
+
 
 <h1 class="bg-secondary d-inline-block">Array using For loop</h1>
 @for(s of students;track s)

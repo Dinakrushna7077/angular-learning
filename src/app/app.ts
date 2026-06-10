@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 //import { RouterOutlet } from '@angular/router';
 
 
@@ -9,7 +9,15 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  
+  x=10;
+  count=signal(1);
+
+  constructor()
+  {
+    effect(()=>{
+      alert("signal changed to "+this.count())
+    })
+  }
   students=["Dina","abhi","Sahil","Aniket","Rahul"];
   data=
   [
