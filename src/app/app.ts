@@ -9,25 +9,125 @@ import { Component, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('first-ng-app');
-
-  theme="Light Mode";
-  changeTheme(appTheme: HTMLElement)
-  {
-    if(this.theme=="Dark Mode")
-      {
-        this.theme="Light Mode";
-        appTheme.classList.add("bg-dark","text-light");
-        appTheme.classList.remove("bg-light","text-dark");
-      }
-    else
+  
+  students=["Dina","abhi","Sahil","Aniket","Rahul"];
+  data=
+  [
     {
-      this.theme="Dark Mode";
-      appTheme.classList.add("bg-light","text-dark");
-      appTheme.classList.remove("bg-dark","text-light");
+      name:"Dinakrushna Mohanta",
+      roll:216,
+      dept:"CS",
+      hostel:true
+    },
+    {
+      name:"Arun Ku. Mohanta",
+      roll:218,
+      dept:"CSE",
+      hostel:true
+    },
+    {
+      name:"Sakuntala Mohanta",
+      roll:236,
+      dept:"ECE",
+      hostel:true
+    },
+    {
+      name:"Saroj Majhi",
+      roll:256,
+      dept:"BCA",
+      hostel:false
+    },
+    {
+      name:"Tofan Ku Pradhan",
+      roll:226,
+      dept:"B-Tech",
+      hostel:true
     }
+  ]
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // color="white";
+  // inpColor="gray";
+  // handleInp(event:Event)
+  // {
+  //   this.inpColor=(event.target as HTMLInputElement).value.toLowerCase();
+  //   this.handleColor(this.inpColor)
+  // }
+  
 
-  }
+  // handleColor(col:string)
+  // {
+  //   this.color=col;
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   protected readonly title = signal('first-ng-app');
+//   color="white";
+//   inputColor="";
+  
+//  handleColor(clr:string)
+//  {
+//   this.color=clr;
+//  }
+
+
+
+
+
+
+
+  // x=0;
+  // theme="Light Mode";
+  // changeTheme(appTheme: HTMLElement)
+  // {
+  //   if(this.theme=="Dark Mode")
+  //     {
+  //       this.theme="Light Mode";
+  //       appTheme.classList.add("bg-dark","text-light");
+  //       appTheme.classList.remove("bg-light","text-dark");
+  //     }
+  //   else
+  //   {
+  //     this.theme="Dark Mode";
+  //     appTheme.classList.add("bg-light","text-dark");
+  //     appTheme.classList.remove("bg-dark","text-light");
+  //   }
+
+  // }
   // display=false;
 
   // toggleButton()

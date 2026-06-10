@@ -1,9 +1,134 @@
-<div class="vh-100 vw-100 d-flex align-center justifycontent-center bg-dark text-light"  #appTheme>
-  <div class="d-flex align-items-center justify-content-center vw-100 vh-100">
-  <button class="btn btn-primary w-50" (click)="changeTheme(appTheme);">{{theme}}</button>
-</div>
+
+<h1 class="bg-secondary d-inline-block">Array using For loop</h1>
+@for(s of students;track s)
+{
+  <h3 style="background-color: whitesmoke;">{{s}}</h3>
+}
+<hr>
+<h1 class="bg-secondary d-inline-block">Array of Object using for loop</h1>
+<table>
+  <tr>
+    <th>SI</th>
+    <th>Name</th>
+    <th>Roll No</th>
+    <th>Department</th>
+    <th>Is Hosteler</th>
+  </tr>
+  @for(std of data;track std.roll;let x=$index)
+  {
+    <tr>
+      <td>{{x+1}}</td>
+      <td>{{std.name}}</td>
+      <td>{{std.roll}}</td>
+      <td>{{std.dept}}</td>
+      <td>{{std.hostel}}</td>
+    </tr>
+  }
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div>
+  <button (click)="handleColor('red')">Red</button>
+  <button (click)="handleColor('green')">Green</button>
+  <button (click)="handleColor('blue')">Blue</button>
+  <button (click)="handleColor('gray')">Gray</button>
 </div>
 
+<div>
+  <input type="text" name="clr" (input)="handleInp($event)">
+</div>
+@switch(color)
+{
+  @case("red")
+  {
+    <div style="height: 100px; width: 100px; background-color: red;"></div>
+  }
+  @case("green")
+  {
+    <div style="height: 100px; width: 100px; background-color: green;"></div>
+  }
+  @case("blue")
+  {
+    <div style="height: 100px; width: 100px; background-color: blue;"></div>
+  }
+  @case("gray")
+  {
+    <div style="height: 100px; width: 100px; background-color: gray;"></div>
+  }
+  @case("deepskyblue")
+  {
+    <div style="height: 100px; width: 100px; background-color: deepskyblue;"></div>
+  }
+  @case("violet")
+  {
+    <div style="height: 100px; width: 100px; background-color: violet;"></div>
+  }
+  @default
+  {
+    <div style="height: 100px; width: 100px; background-color: yellow;"></div>
+  }
+} -->
+
+
+
+
+
+
+
+
+
+<!-- 
+<div>
+  <button (click)="handleColor('green')">Green</button>
+  <button (click)="handleColor('red')">Red</button>
+  <button (click)="handleColor('gray')">Gray</button>
+  <button (click)="handleColor('blue')">Blue</button>
+<br>
+
+</div>
+@switch(color)
+{
+  @case('green')
+  {
+    <div style="height:200px;width: 200px; background-color: green;"></div>
+  }
+  @case('red')
+  {
+    <div style="height:200px;width: 200px; background-color: red;"></div>
+  }
+  @case('gray')
+  {
+    <div style="height:200px;width: 200px; background-color: gray;"></div>
+  }
+  @case('blue')
+  {
+    <div style="height:200px;width: 200px; background-color: deepskyblue;" id="x"></div>
+  }
+} -->
+
+
+
+
+
+
+
+
+
+<!-- <div class="vh-100 vw-100 d-flex align-center justifycontent-center bg-dark text-light"  #appTheme>
+  <div class="d-flex align-items-center justify-content-center vw-100 vh-100">
+    <button class="btn btn-primary w-50" (click)="changeTheme(appTheme);">{{theme}}</button>
+  </div>
+</div> -->
 
 
 
