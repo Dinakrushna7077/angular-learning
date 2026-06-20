@@ -12,10 +12,19 @@ export class App {
   x=10;
   count=signal(1);
 
+  updateSignal(ind:string)
+  {
+    if(ind==='inc')
+      this.count.set(this.count()+1)
+    else
+      this.count.set(this.count()-1)
+  }
+
+
   constructor()
   {
     effect(()=>{
-      alert("signal changed to "+this.count())
+      console.log("signal changed to "+this.count())
     })
   }
   students=["Dina","abhi","Sahil","Aniket","Rahul"];
