@@ -1,17 +1,21 @@
 import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 //import { RouterOutlet } from '@angular/router';
 
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
 
-students=["Dina","abhi","Sahil","Aniket","Rahul"];
+name:string="";
+printName=()=>{console.log("Name: "+this.name)};
+
+//students=["Dina","abhi","Sahil","Aniket","Rahul"];
 //students=[];
 
 
