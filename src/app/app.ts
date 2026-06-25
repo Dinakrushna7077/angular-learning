@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 //import { RouterOutlet } from '@angular/router';
 
 
@@ -9,58 +9,80 @@ import { Component, effect, signal } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
-  x=10;
-  count=signal(1);
 
-  updateSignal(ind:string)
+  n1=signal(40);
+  n2=signal(10);
+  sum=computed(() => this.n1() + this.n2());
+
+  displaySum()
   {
-    if(ind==='inc')
-      this.count.set(this.count()+1)
-    else
-      this.count.set(this.count()-1)
+    console.log("Updating sum...");
+    console.log("Sum: ",this.sum());
+    console.log("Updated Sum: ",this.sum());
+  }
+  updateSignal()
+  {
+    this.n2.set(this.n2()+50);
   }
 
 
-  constructor()
-  {
-    effect(()=>{
-      console.log("signal changed to "+this.count())
-    })
-  }
-  students=["Dina","abhi","Sahil","Aniket","Rahul"];
-  data=
-  [
-    {
-      name:"Dinakrushna Mohanta",
-      roll:216,
-      dept:"CS",
-      hostel:true
-    },
-    {
-      name:"Arun Ku. Mohanta",
-      roll:218,
-      dept:"CSE",
-      hostel:true
-    },
-    {
-      name:"Sakuntala Mohanta",
-      roll:236,
-      dept:"ECE",
-      hostel:true
-    },
-    {
-      name:"Saroj Majhi",
-      roll:256,
-      dept:"BCA",
-      hostel:false
-    },
-    {
-      name:"Tofan Ku Pradhan",
-      roll:226,
-      dept:"B-Tech",
-      hostel:true
-    }
-  ]
+
+
+
+
+
+
+  // x=10;
+  // count=signal(1);
+
+  // updateSignal(ind:string)
+  // {
+  //   if(ind==='inc')
+  //     this.count.set(this.count()+1)
+  //   else
+  //     this.count.set(this.count()-1)
+  // }
+
+  // constructor()
+  // {
+  //   effect(()=>{
+  //     console.log("signal changed to "+this.count())
+  //   })
+  // }
+  // students=["Dina","abhi","Sahil","Aniket","Rahul"];
+  // data=
+  // [
+  //   {
+  //     name:"Dinakrushna Mohanta",
+  //     roll:216,
+  //     dept:"CS",
+  //     hostel:true
+  //   },
+  //   {
+  //     name:"Arun Ku. Mohanta",
+  //     roll:218,
+  //     dept:"CSE",
+  //     hostel:true
+  //   },
+  //   {
+  //     name:"Sakuntala Mohanta",
+  //     roll:236,
+  //     dept:"ECE",
+  //     hostel:true
+  //   },
+  //   {
+  //     name:"Saroj Majhi",
+  //     roll:256,
+  //     dept:"BCA",
+  //     hostel:false
+  //   },
+  //   {
+  //     name:"Tofan Ku Pradhan",
+  //     roll:226,
+  //     dept:"B-Tech",
+  //     hostel:true
+  //   }
+  // ]
   
   
   
