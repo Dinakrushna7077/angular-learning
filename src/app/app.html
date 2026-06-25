@@ -1,9 +1,51 @@
+<h4 class="bg-secondary d-inline-block">Contextual variables</h4>
+<br>
+<br><br><br>
 
+@for(std of students;track std)
+{
+  
+  <h3 class="d-inline">{{$index+1}}</h3>
+  @if($first)
+  {
+    <h3 class="bg-primary bg-opacity-75 text-dark d-inline-block"> {{std}} </h3>
+  }
+  @else if($last)
+  {
+    <h3 class="bg-warning bg-opacity-75 text-dark d-inline-block"> {{std}} </h3>
+    <br>
+    <h3 class="text-dark d-inline-block"> Total Number of students : {{$count}} </h3>
+
+  }
+  @else
+  {
+    @if($even)
+    {
+      <h3 class="bg-success bg-opacity-75 text-dark d-inline-block"> {{std}} </h3>
+    }
+    @if($odd)
+    {
+      <h3 class="bg-danger bg-opacity-25 text-dark d-inline-block"> {{std}} </h3>
+    }
+  }
+  <br>
+}
+@empty()
+  {
+    <h3 class="bg-danger bg-opacity-25 text-dark d-inline-block"> No Students Found </h3>
+  }
+
+
+
+
+
+
+<!-- 
 <h4 class="bg-secondary d-inline-block">Computed Signal</h4>
 <br>
 <h6>Value of Sum: {{sum()}}</h6>
 <button (click)="displaySum()">Display Sum</button>
-<button (click)="updateSignal()">Update Signal2</button>
+<button (click)="updateSignal()">Update Signal2</button> -->
 
 <!-- <h1 class="bg-secondary d-inline-block">Signal data type</h1>
 <br>

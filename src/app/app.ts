@@ -10,6 +10,17 @@ import { Component, computed, effect, signal, WritableSignal } from '@angular/co
 })
 export class App {
 
+
+students=["Dina","abhi","Sahil","Aniket","Rahul"];
+//students=[];
+
+
+
+
+
+
+
+/* Computed Signal
   n1=signal(40);
   n2=signal(10);
   sum=computed(() => this.n1() + this.n2());
@@ -24,6 +35,7 @@ export class App {
   {
     this.n2.set(this.n2()+50);
   }
+    */
 
 
 
